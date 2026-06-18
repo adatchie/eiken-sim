@@ -1,0 +1,120 @@
+/* 英検3級 Speaking Simulator v2 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #fff; min-height: 100vh;
+  display: flex; justify-content: center; align-items: flex-start; padding: 20px;
+}
+#app { width: 100%; max-width: 720px; margin: 0 auto; }
+.screen { width: 100%; }
+
+/* Progress bar */
+.bar { width: 100%; height: 8px; background: #2a2a4a; border-radius: 4px; margin-bottom: 20px; overflow: hidden; }
+.fill { height: 100%; background: linear-gradient(90deg, #4CAF50, #8BC34A); border-radius: 4px; transition: width 0.4s; }
+
+/* Menu */
+h1 { text-align: center; font-size: 28px; margin-bottom: 20px; line-height: 1.3; }
+.settings { background: #1e2a45; border-radius: 12px; padding: 16px; margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; align-items: center; }
+.settings label { font-size: 14px; display: flex; align-items: center; gap: 6px; }
+.settings select { background: #2a3a55; color: #fff; border: 1px solid #4a5a75; border-radius: 6px; padding: 4px 8px; font-size: 13px; }
+.warn { background: #3d2e1e; border: 1px solid #ff9800; border-radius: 8px; padding: 10px; margin-bottom: 16px; font-size: 13px; text-align: center; }
+.hint { text-align: center; font-size: 15px; color: #aab; margin-bottom: 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+.set-card { background: linear-gradient(135deg, #2a3a5a, #1e2a45); border: 2px solid #3a4a6a; border-radius: 16px; padding: 24px 16px; text-align: center; cursor: pointer; transition: all 0.2s; }
+.set-card:hover { border-color: #6C7EE6; transform: translateY(-3px); box-shadow: 0 4px 20px rgba(108,126,230,0.3); }
+.set-emoji { font-size: 40px; margin-bottom: 8px; }
+.set-title { font-size: 17px; font-weight: bold; margin-bottom: 4px; }
+.set-info { font-size: 12px; color: #889; }
+
+/* Stages */
+.big-emoji { font-size: 64px; text-align: center; margin: 20px 0; }
+h2 { text-align: center; font-size: 24px; margin-bottom: 20px; }
+.label { font-size: 18px; font-weight: bold; text-align: center; margin-bottom: 12px; color: #8BC34A; }
+.bubble { background: #2a3a55; border-radius: 16px; padding: 20px; margin: 20px 0; min-height: 60px; font-size: 16px; line-height: 1.6; border-left: 4px solid #6C7EE6; }
+
+/* Timer */
+#timer { text-align: center; font-size: 28px; font-weight: bold; margin-bottom: 16px; font-family: monospace; transition: color 0.3s; }
+
+/* Passage */
+.passage { background: #1e2a45; border-radius: 12px; padding: 24px; font-size: 18px; line-height: 1.8; margin-bottom: 20px; border: 1px solid #3a4a6a; }
+
+/* Illustration */
+.illust-box { text-align: center; margin-bottom: 16px; }
+.illust-img { max-width: 100%; max-height: 280px; border-radius: 12px; border: 2px solid #3a4a6a; }
+.illust-placeholder { flex-direction: column; align-items: center; justify-content: center; background: #1e2a45; border: 2px dashed #4a5a75; border-radius: 12px; padding: 40px; min-height: 200px; }
+.illust-placeholder p { font-size: 15px; color: #889; margin-top: 8px; }
+.illust-placeholder .path { font-size: 12px; color: #4CAF50; font-family: monospace; }
+
+/* Question box */
+.qbox { background: #2a3a5a; border-radius: 12px; padding: 20px; margin-bottom: 16px; text-align: center; }
+.qtext { font-size: 20px; line-height: 1.5; margin-bottom: 10px; }
+.rqtext { font-size: 14px; color: #ccc; margin-bottom: 4px; }
+.btn-replay { background: #3a4a6a; color: #fff; border: none; border-radius: 8px; padding: 6px 16px; font-size: 14px; cursor: pointer; }
+.btn-replay:hover { background: #4a5a7a; }
+
+/* Answer area */
+#answer-area { text-align: center; margin-bottom: 16px; }
+.interim { font-size: 15px; color: #aab; min-height: 24px; margin-bottom: 8px; font-style: italic; }
+
+/* Buttons */
+.btn-mic { background: #4CAF50; color: #fff; border: none; border-radius: 12px; padding: 14px 32px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); transition: all 0.2s; }
+.btn-mic:hover { opacity: 0.9; transform: scale(1.02); }
+.btn-mic-rec { background: #ff4444; color: #fff; border: none; border-radius: 12px; padding: 14px 32px; font-size: 18px; font-weight: bold; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.3); animation: pulse 1.5s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+
+.btn-go { display: block; width: 100%; background: #6C7EE6; color: #fff; border: none; border-radius: 12px; padding: 16px; font-size: 20px; font-weight: bold; cursor: pointer; margin-top: 16px; transition: all 0.2s; }
+.btn-go:hover { background: #5a6ed6; }
+
+.btn-skip { display: block; width: 100%; background: transparent; color: #889; border: 1px solid #445; border-radius: 8px; padding: 10px; font-size: 14px; cursor: pointer; margin-top: 8px; }
+.btn-skip:hover { border-color: #889; color: #bbc; }
+
+/* Card flip */
+.card-flip { text-align: center; }
+.card-flip .big-emoji { animation: flip 1s ease-in-out; }
+@keyframes flip { 0% { transform: rotateY(0); } 50% { transform: rotateY(180deg); } 100% { transform: rotateY(360deg); } }
+
+/* Results */
+.rsection { margin-bottom: 24px; }
+.rsection h3 { font-size: 18px; margin-bottom: 10px; color: #6C7EE6; }
+.rcard { background: #1e2a45; border-radius: 10px; padding: 16px; margin-bottom: 10px; border-left: 4px solid #666; }
+.rcard.good { border-left-color: #4CAF50; }
+.rcard.ok { border-left-color: #ff9800; }
+.rcard.bad { border-left-color: #f44336; }
+.rq { font-size: 15px; font-weight: bold; margin-bottom: 4px; }
+.rstars { font-size: 18px; margin-bottom: 6px; }
+.rua { font-size: 14px; color: #e8e8e8; margin-bottom: 4px; }
+.rma { font-size: 14px; color: #8BC34A; margin-bottom: 4px; }
+.rhit { font-size: 12px; color: #4CAF50; }
+.rmiss { font-size: 12px; color: #ff9800; }
+
+.total { text-align: center; background: #2a3a5a; border-radius: 16px; padding: 24px; margin: 20px 0; }
+.tnum { font-size: 36px; font-weight: bold; }
+.tpct { font-size: 24px; color: #8BC34A; }
+.tgrade { font-size: 20px; margin-top: 8px; }
+
+/* Toast */
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 12px 24px; border-radius: 8px; font-size: 15px; z-index: 9999; animation: fadeIn 0.3s; }
+@keyframes fadeIn { from { opacity: 0; transform: translateX(-50%) translateY(10px); } to { opacity: 1; } }
+
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr 1fr; }
+  .passage { font-size: 16px; }
+  .qtext { font-size: 18px; }
+  h1 { font-size: 22px; }
+}
+
+/* Toggle switch */
+.toggle-row { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 16px; }
+.toggle-label { font-size: 15px; color: #ccd; }
+.toggle-status { font-size: 13px; color: #8BC34A; font-weight: bold; }
+.switch { position: relative; display: inline-block; width: 52px; height: 28px; }
+.switch input { opacity: 0; width: 0; height: 0; }
+.slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background: #555; border-radius: 28px; transition: 0.3s; }
+.slider:before { content: ''; position: absolute; height: 20px; width: 20px; left: 4px; bottom: 4px; background: #fff; border-radius: 50%; transition: 0.3s; }
+.switch input:checked + .slider { background: #4CAF50; }
+.switch input:checked + .slider:before { transform: translateX(24px); }
+
+/* Hidden question text (本番モード) */
+.qtext-hidden { font-size: 16px; color: #8899aa; font-style: italic; text-align: center; }

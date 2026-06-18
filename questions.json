@@ -1,0 +1,130 @@
+[
+  {
+    "id": "01",
+    "title": "Cycling in Denmark",
+    "emoji": "🚲",
+    "image": "assets/01_illustration.jpg",
+    "passage": "In Denmark, many people ride bicycles. Cycling is part of their daily life. There are special roads for bicycles in cities. About nine out of ten people in Copenhagen have a bicycle. They ride to work, to school, and to shops. Riding a bicycle is good for their health and the environment.",
+    "passage_q": {"q": "How many people in Copenhagen have a bicycle?", "a": "About nine out of ten people have a bicycle.", "keywords": ["nine", "ten", "copenhagen"]},
+    "illustration_qs": [
+      {"q": "Now, please look at the picture. What is the woman doing?", "a": "She is riding a bicycle.", "keywords": ["riding", "bicycle", "bike"]},
+      {"q": "How many bicycles are there in the picture?", "a": "There are three bicycles.", "keywords": ["three", "3"]}
+    ],
+    "personal_qs": [
+      {"q": "Do you have a bicycle?", "a": "Yes, I do. / No, I don't.", "keywords": ["yes", "no", "have"]},
+      {"q": "What do you usually do on weekends?", "a": "I usually play sports / watch TV / study.", "keywords": ["usually", "play", "watch", "study", "weekend"]}
+    ]
+  },
+  {
+    "id": "02",
+    "title": "Street Dance",
+    "emoji": "💃",
+    "image": "assets/02_illustration.jpg",
+    "passage": "Dancing is popular in Japan. Many young people enjoy street dance. They dance in parks and on the streets. Some people join dance groups and practice together. There are dance contests for high school students. Dancing is good exercise and it is a fun way to make friends.",
+    "passage_q": {"q": "Where do young people dance?", "a": "They dance in parks and on the streets.", "keywords": ["parks", "streets", "dance"]},
+    "illustration_qs": [
+      {"q": "Now, please look at the picture. What are the people doing?", "a": "They are dancing.", "keywords": ["dancing", "dance"]},
+      {"q": "How many people are in the picture?", "a": "There are four people.", "keywords": ["four", "4"]}
+    ],
+    "personal_qs": [
+      {"q": "Do you like dancing?", "a": "Yes, I do. / No, I don't.", "keywords": ["yes", "no", "like"]},
+      {"q": "What is your favorite subject at school?", "a": "My favorite subject is math / English / science.", "keywords": ["favorite", "subject", "math", "english", "science"]}
+    ]
+  },
+  {
+    "id": "03",
+    "title": "Soccer in England",
+    "emoji": "⚽",
+    "image": "assets/03_illustration.jpg",
+    "passage": "England has the most popular soccer league in the world. Many people go to stadiums to watch soccer games on weekends. Some fans travel a long way to see their favorite teams. People also watch games on TV at home or at sports bars. Soccer brings people together and they enjoy talking about the games.",
+    "passage_q": {"q": "What do many people do on weekends in England?", "a": "They go to stadiums to watch soccer games.", "keywords": ["stadiums", "watch", "soccer", "games", "weekends"]},
+    "illustration_qs": [
+      {"q": "Now, please look at the picture. What is the boy doing?", "a": "He is kicking a soccer ball.", "keywords": ["kicking", "soccer", "ball", "playing"]},
+      {"q": "What is the boy wearing?", "a": "He is wearing a soccer uniform.", "keywords": ["wearing", "uniform", "shirt", "shoes"]}
+    ],
+    "personal_qs": [
+      {"q": "Do you play any sports?", "a": "Yes, I play soccer / baseball / tennis.", "keywords": ["yes", "play", "soccer", "baseball", "tennis", "sports"]},
+      {"q": "What do you do after school?", "a": "I do my homework / play with friends / practice sports.", "keywords": ["homework", "play", "practice", "friends", "after", "school"]}
+    ]
+  },
+  {
+    "id": "04",
+    "title": "YouTube on Smartphones",
+    "emoji": "📱",
+    "image": "assets/04_illustration.jpg",
+    "passage": "Today, many people watch videos on their smartphones. YouTube is one of the most popular websites. People watch music videos, cooking programs, and funny animal videos. Some people make their own videos and share them online. Many young people watch YouTube every day for fun and to learn new things.",
+    "passage_q": {"q": "What do people watch on YouTube?", "a": "They watch music videos, cooking programs, and funny animal videos.", "keywords": ["music", "videos", "cooking", "animal", "watch"]},
+    "illustration_qs": [
+      {"q": "Now, please look at the picture. What is the girl doing?", "a": "She is watching a video on her smartphone.", "keywords": ["watching", "video", "smartphone", "phone"]},
+      {"q": "Where is the girl sitting?", "a": "She is sitting on a sofa.", "keywords": ["sofa", "couch", "sitting"]}
+    ],
+    "personal_qs": [
+      {"q": "Do you use a smartphone?", "a": "Yes, I do. / No, I don't.", "keywords": ["yes", "no", "smartphone", "use"]},
+      {"q": "What do you do in your free time?", "a": "I play games / read books / watch videos.", "keywords": ["games", "read", "books", "watch", "videos", "free", "time"]}
+    ]
+  },
+  {
+    "id": "05",
+    "title": "Exercising in the Park",
+    "emoji": "🏃",
+    "image": "assets/05_illustration.jpg",
+    "passage": "Many people exercise in the park. In the morning, you can see people jogging, walking, and doing yoga. Some parks have special equipment for exercise. Exercising outside is good because people can enjoy fresh air and sunshine. It is also a good place to meet friends and talk.",
+    "passage_q": {"q": "What can you see people doing in the park in the morning?", "a": "You can see people jogging, walking, and doing yoga.", "keywords": ["jogging", "walking", "yoga", "morning"]},
+    "illustration_qs": [
+      {"q": "Now, please look at the picture. What are the people doing?", "a": "They are exercising / running.", "keywords": ["exercising", "running", "jogging"]},
+      {"q": "How many people are running?", "a": "There are two people running.", "keywords": ["two", "2", "running"]}
+    ],
+    "personal_qs": [
+      {"q": "Do you exercise every day?", "a": "Yes, I do. / No, I don't.", "keywords": ["yes", "no", "exercise", "every", "day"]},
+      {"q": "What sport do you like?", "a": "I like soccer / basketball / swimming.", "keywords": ["like", "soccer", "basketball", "swimming", "sport"]}
+    ]
+  },
+  {
+    "id": "06",
+    "title": "Listening to Music",
+    "emoji": "🎵",
+    "image": "assets/06_illustration.jpg",
+    "passage": "Some people listen to music on their smartphones. They listen to music on the train, at home, or while walking. There are many kinds of music, like pop, rock, and classical. Some students listen to music when they study. Music can help people relax and feel happy. It is a big part of daily life.",
+    "passage_q": {"q": "Where do people listen to music?", "a": "They listen to music on the train, at home, or while walking.", "keywords": ["train", "home", "walking", "listen", "music"]},
+    "illustration_qs": [
+      {"q": "Now, please look at the picture. What is the boy doing?", "a": "He is listening to music.", "keywords": ["listening", "music", "earphones", "headphones"]},
+      {"q": "What is the boy wearing on his ears?", "a": "He is wearing headphones / earphones.", "keywords": ["headphones", "earphones", "wearing"]}
+    ],
+    "personal_qs": [
+      {"q": "Do you like listening to music?", "a": "Yes, I do. / No, I don't.", "keywords": ["yes", "no", "like", "music", "listening"]},
+      {"q": "What kind of music do you like?", "a": "I like pop / rock / classical music.", "keywords": ["pop", "rock", "classical", "like", "kind", "music"]}
+    ]
+  },
+  {
+    "id": "07",
+    "title": "Camping in the Mountains",
+    "emoji": "⛺",
+    "image": "assets/07_illustration.jpg",
+    "passage": "Many Japanese people like camping. In summer, families go to the mountains and stay in tents. They cook food outside and have barbecues. Children can play in the river and catch fish. At night, they look at the stars. Camping is a fun way to enjoy nature and spend time with family.",
+    "passage_q": {"q": "What do families do when they go camping?", "a": "They cook food outside, have barbecues, and children play in the river.", "keywords": ["cook", "food", "barbecue", "river", "play", "tent", "camping"]},
+    "illustration_qs": [
+      {"q": "Now, please look at the picture. What can you see in the picture?", "a": "I can see a tent / a campfire / mountains.", "keywords": ["tent", "campfire", "fire", "mountains", "trees"]},
+      {"q": "How many tents are there?", "a": "There is one tent / two tents.", "keywords": ["one", "two", "1", "2", "tent"]}
+    ],
+    "personal_qs": [
+      {"q": "Have you ever been camping?", "a": "Yes, I have. / No, I haven't.", "keywords": ["yes", "no", "camping", "been", "have"]},
+      {"q": "What do you do in summer vacation?", "a": "I go to the beach / visit my grandparents / study.", "keywords": ["beach", "visit", "grandparents", "study", "summer", "vacation", "go"]}
+    ]
+  },
+  {
+    "id": "08",
+    "title": "International Food",
+    "emoji": "🍴",
+    "image": "assets/08_illustration.jpg",
+    "passage": "Tokyo has many kinds of restaurants. You can eat Italian, Indian, Chinese, and many other foods. Some people enjoy trying food from different countries. International food is popular because it is fun to taste new flavors. Food festivals are held in Tokyo every year. Many people visit them to enjoy delicious food from around the world.",
+    "passage_q": {"q": "Why is international food popular?", "a": "Because it is fun to taste new flavors.", "keywords": ["fun", "taste", "new", "flavors", "popular"]},
+    "illustration_qs": [
+      {"q": "Now, please look at the picture. What are the people doing?", "a": "They are eating / having a meal.", "keywords": ["eating", "meal", "food", "having", "dinner", "lunch"]},
+      {"q": "What is on the table?", "a": "There are plates, food, and drinks on the table.", "keywords": ["plates", "food", "drinks", "table"]}
+    ],
+    "personal_qs": [
+      {"q": "What is your favorite food?", "a": "My favorite food is sushi / pizza / curry.", "keywords": ["favorite", "food", "sushi", "pizza", "curry"]},
+      {"q": "Can you cook?", "a": "Yes, I can. / No, I can't.", "keywords": ["yes", "no", "cook", "can"]}
+    ]
+  }
+]
