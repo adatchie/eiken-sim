@@ -451,7 +451,7 @@ const QUESTION_SETS = [
     "id": "08",
     "title": "International Food",
     "emoji": "🍴",
-    "image": "assets/08_illustration.jpg",
+    "image": "assets/08_illustration.png",
     "passage": "Tokyo has many kinds of restaurants. You can eat Italian, Indian, Chinese, and many other foods. Some people enjoy trying food from different countries. International food is popular because it is fun to taste new flavors. Food festivals are held in Tokyo every year. Many people visit them to enjoy delicious food from around the world.",
     "passage_q": {
       "q": "Why is international food popular?",
@@ -516,7 +516,7 @@ const QUESTION_SETS = [
     "id": "09",
     "title": "Fun at Airports",
     "emoji": "✈️",
-    "image": "assets/09_illustration.png",
+    "image": "assets/09_illustration.jpg",
     "source_url": "https://nicksenglish.com/eiken/interview/eiken_3_interview_fun_at_airports",
     "passage": "Airports are popular places to go for a day trip. Because airplanes leave every few minutes, children can enjoy watching them. Some people like to take photos. There are also shops, restaurants and play areas.",
     "passage_q": {
