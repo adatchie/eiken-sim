@@ -1500,15 +1500,35 @@ async function ensureMicPermission() {
 S._continuous = false;
 S._finalT = '';
 S._userStopped = false;
+S._starting = false;
 
-function startListening(onResult, continuous) {
+async function startListening(onResult, continuous) {
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SR) { showTextInput(onResult); return; }
   if (S.recognition) { try { S.recognition.stop(); } catch(e){} }
+  // 連打防止: 待機中フラグ
+  if (S._starting) return;
+  S._starting = true;
 
   S._continuous = !!continuous;
   S._finalT = '';
   S._userStopped = false;
+  // ボタンに「準備中」を表示
+  const btn = $('mic-btn');
+  if (btn) { btn.textContent = '⏳ 準備中...'; btn.className = 'btn-mic-rec'; }
+
+  // マイク許可を確実に取得してから録音開始
+  // （startTestではfire-and-forgetで呼んであるが、ユーザーが
+  //   ウォーミングアップ画面で「答える」を押すまでに許可が
+  //   完了していない場合があるので、ここで改めて待つ）
+  const ok = await ensureMicPermission();
+  S._starting = false;
+  if (!ok) {
+    micBtn(false);
+    toast('⚠️ マイクを許可してください');
+    showTextInput(onResult);
+    return;
+  }
 
   function createRec() {
     const r = new SR();
@@ -1559,6 +1579,7 @@ function startListening(onResult, continuous) {
 }
 function stopListening() {
   S._userStopped = true;
+  S._starting = false;
   if (S.recognition) { try { S.recognition.stop(); } catch(e){} }
   S.isListening = false; micBtn(false);
 }
