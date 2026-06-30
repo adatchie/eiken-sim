@@ -1405,5 +1405,69 @@
         ]
       }
     ]
+  },
+  {
+    "id": "22",
+    "title": "Listening to the Radio",
+    "emoji": "📻",
+    "image": "assets/22_illustration.webp",
+    "source_url": "https://www.eiken.or.jp/eiken/exam/virtual/grade_3/pdf/grade_3.pdf",
+    "passage": "There are many kinds of radio programs. People often enjoy listening to sports or their favorite songs. People can learn English and other languages from the radio, so it is very useful.",
+    "passage_q": {
+      "q": "Please look at the passage. What can people learn from the radio?",
+      "a": "They can learn English and other languages from the radio.",
+      "keywords": [
+        "english",
+        "other",
+        "languages",
+        "learn",
+        "radio"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the picture. What is the man going to do?",
+        "a": "He's going to read a newspaper.",
+        "keywords": [
+          "read",
+          "newspaper",
+          "going",
+          "man"
+        ]
+      },
+      {
+        "q": "How many cups are there on the table?",
+        "a": "There are two cups on the table.",
+        "keywords": [
+          "two",
+          "2",
+          "cups",
+          "table"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "What do you like to do on weekends?",
+        "a": "I like to play tennis.",
+        "keywords": [
+          "like",
+          "play",
+          "tennis",
+          "weekends"
+        ]
+      },
+      {
+        "q": "Have you ever been to a foreign country?",
+        "a": "Yes. I've been to America.",
+        "keywords": [
+          "yes",
+          "been",
+          "america",
+          "foreign",
+          "country"
+        ]
+      }
+    ]
   }
 ]
