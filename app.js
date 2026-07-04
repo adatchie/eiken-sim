@@ -1481,22 +1481,10 @@ function speak(text, onEnd) {
   speechSynthesis.speak(u);
 }
 
-// ── MICROPHONE PERMISSION (1回だけ許可 → 以降ダイアログなし) ──
-S.micStream = null;
-
-async function ensureMicPermission() {
-  if (S.micStream) return true;
-  try {
-    S.micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    return true;
-  } catch(e) {
-    console.warn('Mic permission denied:', e);
-    return false;
-  }
-}
-
 // ── SPEECH RECOGNITION ─────────────────────────────────
 // continuous=true で音読などの長時間録音に対応（停止→自動再開）
+// 注意: getUserMediaを使わないこと。SpeechRecognitionが自分でマイクを管理する。
+//       getUserMediaがストリームを占有するとSpeechRecognitionが音声を受け取れない。
 S._continuous = false;
 S._finalT = '';
 S._userStopped = false;
@@ -1676,9 +1664,6 @@ function showMenu() {
 // ============================================================
 function startTest(id) {
   S.setId = id; S.answers = [];
-  // マイク許可をバックグラウンドで開始（awaitしない＝TTSのジェスチャーチェーンを維持）
-  // ユーザーがウォーミングアップ音声を聞いている間に許可ダイアログが出る
-  ensureMicPermission().catch(() => {});
   showWarmup();
 }
 
