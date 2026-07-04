@@ -1823,15 +1823,17 @@ function goQ1() {
   render(
     bar(35) +
     '<div class="screen">' +
-    '<div class="label">📝 質問 1 / 5 — パッセージ</div>' +
+    '<div class="label">📝 質問 1 / 5 — パッセージを見て答えて</div>' +
     '<div id="timer">⏱ 40s</div>' +
+    '<div class="passage">' + s.passage + '</div>' +
+    illustHtml(s) +
     '<div class="qbox">' + qtextHtml(q) +
     '<button class="btn-replay" onclick="speak(getSet().passage_q.q)">🔊 もう一度聞く</button></div>' +
     '<div id="answer-area"><div id="interim-text" class="interim"></div>' +
     '<button class="btn-mic" id="mic-btn" onclick="micQ(\'passage\',0)">🎤 答える</button></div>' +
     '<button class="btn-skip" onclick="skipQ(\'passage\',0)">スキップ →</button></div>'
   );
-  speak(q.q);
+  speak('Please look at the passage. ' + q.q);
   startTimerGuide(40);
 }
 
