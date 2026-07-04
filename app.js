@@ -1510,25 +1510,20 @@ async function startListening(onResult, continuous) {
   if (S._starting) return;
   S._starting = true;
 
-  S._continuous = !!continuous;
-  S._finalT = '';
-  S._userStopped = false;
-  // ボタンに「準備中」を表示
-  const btn = $('mic-btn');
-  if (btn) { btn.textContent = '⏳ 準備中...'; btn.className = 'btn-mic-rec'; }
+  try {
+    S._continuous = !!continuous;
+    S._finalT = '';
+    S._userStopped = false;
+    const btn = $('mic-btn');
+    if (btn) { btn.textContent = '⏳ 準備中...'; btn.className = 'btn-mic-rec'; }
 
-  // マイク許可を確実に取得してから録音開始
-  // （startTestではfire-and-forgetで呼んであるが、ユーザーが
-  //   ウォーミングアップ画面で「答える」を押すまでに許可が
-  //   完了していない場合があるので、ここで改めて待つ）
-  const ok = await ensureMicPermission();
-  S._starting = false;
-  if (!ok) {
-    micBtn(false);
-    toast('⚠️ マイクを許可してください');
-    showTextInput(onResult);
-    return;
-  }
+    const ok = await ensureMicPermission();
+    if (!ok) {
+      micBtn(false);
+      toast('⚠️ マイクを許可してください');
+      showTextInput(onResult);
+      return;
+    }
 
   function createRec() {
     const r = new SR();
@@ -1576,6 +1571,7 @@ async function startListening(onResult, continuous) {
 
   S.recognition = createRec(); S.isListening = true; S._userStopped = false; micBtn(true);
   try { S.recognition.start(); } catch(e) { S.isListening = false; micBtn(false); }
+  } finally { S._starting = false; }
 }
 function stopListening() {
   S._userStopped = true;
@@ -1797,7 +1793,7 @@ function showReadingAloud() {
   speak('Now, please read the passage aloud.');
 }
 
-function micReading() {
+async function micReading() {
   if (S.isListening) {
     stopListening();
     if (S.transcript) {
@@ -1806,7 +1802,7 @@ function micReading() {
     }
   } else {
     S.transcript = '';
-    startListening((t) => {
+    await startListening((t) => {
       S.answers.push({type:'reading', q:'(Reading)', a:t});
       toast('✅ 音読を記録');
     }, true); // ← 連続モード: 長時間録音ON
@@ -1940,13 +1936,13 @@ function goQ5() {
 // ============================================================
 //  MIC/SKIP — Universal Q handler
 // ============================================================
-function micQ(cat, idx) {
+async function micQ(cat, idx) {
   if (S.isListening) {
     stopListening();
     if (S.transcript) submitQ(cat, idx, S.transcript);
   } else {
     S.transcript = '';
-    startListening((t) => submitQ(cat, idx, t));
+    await startListening((t) => submitQ(cat, idx, t));
   }
 }
 
