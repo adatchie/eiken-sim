@@ -19,13 +19,27 @@
 - **教訓**: **SpeechRecognitionとgetUserMediaを同時に使うな。** SpeechRecognitionは単独でマイク許可を要求できる。getUserMediaでの事前取得は不要であり、ストリームを占有してSpeechRecognitionを壊す。
 - **状態**: 修正済み・デプロイ確認済み
 
-## バグ #2 — goQ1の変更後に録音不能が発覚（バグ#1と同一原因の可能性高い）
+## バグ #2 — goQ1の変更後に録音不能が発覚
 - **日付**: 2025-06-30 (commit 79a153f 後に発覚)
 - **症状**: Q1で録音ができない
 - **変更内容**: goQ1のrender HTML変更（passage+illust追加、speakプレフィックス）
-- **原因**: goQ1自体の変更ではなく、バグ#1（4e41ba4のasync化）が潜在的に存在し、
-  たまたまQ1で顕在化した可能性が高い。goQ1のdiffは録音ロジックに触れていない。
-- **状態**: バグ#1の修正で解決したか要確認
+- **原因**: goQ1自体の変更ではなく、バグ#1（getUserMedia）が原因だった
+- **状態**: バグ#1の修正で解決
+
+## バグ #3 — iOS SafariでTTS（読み上げ）が止まる
+- **日付**: 2025-06-30 (commit 1f4a6d7)
+- **症状**: iPad/iPhone Safariで問題読み上げの声が出ない、または途中で止まる
+- **原因**: iOS SafariのSpeechSynthesisバグ（15秒後に勝手にpause、初期化されないと発声しない）
+- **修正**: 
+  1. 初回に空utteranceをkickしてエンジン初期化
+  2. speech中に5秒ごとにresume()を定期呼び出し
+- **状態**: iPadで動作確認済み
+
+## バグ #4 — PC（Acer）で音声認識が動かない
+- **日付**: 2025-06-30
+- **症状**: SpeechRecognitionがマイクに入力を検知しない
+- **原因**: コードではない。最小診断ページ（test-mic.html）でも再現 → PC環境の問題（Acer Purified Voice等のマイク管理ソフトがSpeechRecognitionと干渉）
+- **状態**: コード側では解決不可。iPadで代替運用中。
 
 ---
 
