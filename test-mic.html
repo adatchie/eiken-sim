@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SpeechRecognition Test</title>
+<style>
+body { font-family: sans-serif; padding: 30px; background: #1a1a2e; color: #fff; }
+button { padding: 20px 40px; font-size: 24px; cursor: pointer; border: none; border-radius: 12px; }
+#start { background: #4CAF50; color: white; }
+#start.rec { background: #f44336; }
+#status { font-size: 20px; margin-top: 20px; padding: 15px; background: #16213e; border-radius: 8px; min-height: 30px; }
+#result { font-size: 28px; margin-top: 20px; padding: 20px; background: #16213e; border-radius: 8px; min-height: 60px; word-wrap: break-word; }
+.error { color: #ff6b6b; }
+.ok { color: #4CAF50; }
+</style>
+</head>
+<body>
+<h1>SpeechRecognition 診断</h1>
+<p>英語で話しかけてください（例: "Hello, how are you?"）</p>
+<button id="start" onclick="toggle()">🎤 開始</button>
+<div id="status">待機中</div>
+<div id="result">（結果がここに表示されます）</div>
+<script>
+'use strict';
+var recognition = null;
+var isRec = false;
+
+function toggle() {
+  if (isRec) {
+    if (recognition) recognition.stop();
+    return;
+  }
+  
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  var status = document.getElementById('status');
+  var result = document.getElementById('result');
+  var btn = document.getElementById('start');
+  
+  if (!SR) {
+    status.innerHTML = '<span class="error">⚠ SpeechRecognition非対応ブラウザ</span>';
+    return;
+  }
+  
+  recognition = new SR();
+  recognition.lang = 'en-US';
+  recognition.continuous = true;
+  recognition.interimResults = true;
+  
+  status.innerHTML = '初期化中...';
+  
+  recognition.onstart = function() {
+    isRec = true;
+    btn.textContent = '⏹ 停止';
+    btn.className = 'rec';
+    status.innerHTML = '<span class="ok">● 録音中 — 英語で話してください</span>';
+  };
+  
+  recognition.onresult = function(e) {
+    var interim = '';
+    var final = '';
+    for (var i = e.resultIndex; i < e.results.length; i++) {
+      if (e.results[i].isFinal) {
+        final += e.results[i][0].transcript;
+      } else {
+        interim += e.results[i][0].transcript;
+      }
+    }
+    if (final) {
+      result.innerHTML = '<span class="ok">確定: ' + final + '</span>';
+    } else if (interim) {
+      result.innerHTML = '認識中: ' + interim;
+    }
+  };
+  
+  recognition.onerror = function(e) {
+    status.innerHTML = '<span class="error">エラー: ' + e.error + '</span>';
+    console.log('SpeechRecognition error:', e);
+  };
+  
+  recognition.onend = function() {
+    isRec = false;
+    btn.textContent = '🎤 開始';
+    btn.className = '';
+    status.innerHTML = '録音終了';
+  };
+  
+  try {
+    recognition.start();
+    status.innerHTML = '開始リクエスト送信...';
+  } catch(e) {
+    status.innerHTML = '<span class="error">start()例外: ' + e.message + '</span>';
+  }
+}
+</script>
+</body>
+</html>
