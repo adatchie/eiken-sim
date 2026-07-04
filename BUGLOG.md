@@ -5,14 +5,19 @@
 
 ---
 
-## バグ #1 — startListening の async化 + getUserMedia占有により音声認識が機能停止
-- **日付**: 2025-06-30 (commit 4e41ba4 で発生、3178e4e で悪化)
+## バグ #1 — getUserMediaがSpeechRecognitionの音声入力を妨害
+- **日付**: 2025-06-30 (初回コミット dbc37fa から潜在的に存在、4e41ba4で悪化)
 - **症状**: マイクはOnになるが、吹き込んだ声が一切検知されない
-- **原因**: `ensureMicPermission()` が `getUserMedia` でマイクストリームを占有 → `SpeechRecognition` に音声が渡らない。ブラウザの音声入力は排他的で、getUserMediaのストリームが残っているとSpeechRecognitionが音声を受け取れない。
-- **やったこと**: 4e41ba4で同期関数をasync化してensureMicPermissionを追加。3178e4eでtry-finallyを追加したが、getUserMediaのストリーム占有問題は解決せず。
-- **修正**: startListening全体を6891f59当時の元の同期版に完全復元。getUserMediaをstartListening内で呼ばない（SpeechRecognition自体がマイク許可を管理するため不要）。
-- **状態**: 修正済み（6891f59と完全一致確認済み）
-- **教訓**: **SpeechRecognitionとgetUserMediaを同時に使うな。** SpeechRecognitionは単独でマイク許可を要求・取得できる。getUserMediaでの事前取得は不要であり、かえって害がある。
+- **原因**: `ensureMicPermission()` が `getUserMedia` でマイクストリームを占有 → `SpeechRecognition` に音声が渡らない
+- **経緯**:
+  1. dbc37fa: getUserMediaを初回から使用（startTest内）
+  2. 4e41ba4: startListening内にもgetUserMediaを追加（async化で悪化）
+  3. 3178e4e: try-finallyを追加したが根本解決せず
+  4. 18891cc: startListeningを同期に戻したがgetUserMediaは残存
+  5. 6395811: getUserMediaを完全削除（根本解決）
+- **修正**: ensureMicPermission/S.micStream/getUserMediaを全削除。SpeechRecognitionは自分でマイク許可を管理する。
+- **教訓**: **SpeechRecognitionとgetUserMediaを同時に使うな。** SpeechRecognitionは単独でマイク許可を要求できる。getUserMediaでの事前取得は不要であり、ストリームを占有してSpeechRecognitionを壊す。
+- **状態**: 修正済み・デプロイ確認済み
 
 ## バグ #2 — goQ1の変更後に録音不能が発覚（バグ#1と同一原因の可能性高い）
 - **日付**: 2025-06-30 (commit 79a153f 後に発覚)
