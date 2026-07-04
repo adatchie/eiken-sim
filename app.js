@@ -1469,15 +1469,40 @@ function onQTextToggle(checked) {
   if (st) st.textContent = checked ? 'ON（練習モード）' : 'OFF（本番モード）';
 }
 
-// ── TTS ────────────────────────────────────────────────
+// ── TTS (iOS Safari互換) ────────────────────────────────
+// iOS SafariのSpeechSynthesisは以下のバグがある:
+// 1. 初回呼び出しで音声が出ない → 空のutteranceで「キック」する
+// 2. 15秒後に勝手に止まる → resume()を定期呼び出し
+// 3. pause状態で固まる → resume()で回復
+var _ttsKeepAlive = null;
+function startTtsKeepAlive() {
+  if (_ttsKeepAlive) return;
+  _ttsKeepAlive = setInterval(() => {
+    if (speechSynthesis.speaking) {
+      speechSynthesis.resume();
+    }
+  }, 5000);
+}
+function stopTtsKeepAlive() {
+  if (_ttsKeepAlive) { clearInterval(_ttsKeepAlive); _ttsKeepAlive = null; }
+}
 function speak(text, onEnd) {
   speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
+  // iOS Safari: 空のutteranceでエンジンを起動する
+  try {
+    var kick = new SpeechSynthesisUtterance('');
+    kick.volume = 0;
+    speechSynthesis.speak(kick);
+  } catch(e) {}
+
+  var u = new SpeechSynthesisUtterance(text);
   u.lang = 'en-US'; u.rate = S.rate;
   if (S.voice) u.voice = S.voice;
-  const fb = setTimeout(() => { if (onEnd) { onEnd(); onEnd = null; } }, 15000);
-  u.onend = () => { clearTimeout(fb); if (onEnd) { onEnd(); onEnd = null; } };
-  u.onerror = () => { clearTimeout(fb); if (onEnd) { onEnd(); onEnd = null; } };
+  var done = false;
+  var fb = setTimeout(() => { if (!done) { done = true; stopTtsKeepAlive(); if (onEnd) onEnd(); } }, 15000);
+  u.onend = () => { clearTimeout(fb); done = true; stopTtsKeepAlive(); if (onEnd) onEnd(); };
+  u.onerror = () => { clearTimeout(fb); done = true; stopTtsKeepAlive(); if (onEnd) onEnd(); };
+  startTtsKeepAlive();
   speechSynthesis.speak(u);
 }
 
