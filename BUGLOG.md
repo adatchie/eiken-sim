@@ -5,16 +5,14 @@
 
 ---
 
-## バグ #1 — startListening の非同期化による _starting フラグ競合
-- **日付**: 2025-06-30 (commit 4e41ba4 で発生、79a153f後に発覚)
-- **症状**: マイクボタンを押しても録音が開始しない。ボタンが「⏳ 準備中...」のまま固まる
-- **原因**: `startListening` を `async` 化し `await ensureMicPermission()` を追加したが：
-  1. `S._starting = false` が `await` の直後に単独で置かれており、return パスでクリアされないケースがあった
-  2. 呼び出し元の `micQ()` / `micReading()` が `await` していなかった
-- **修正**:
-  1. `startListening` の本体を try-finally で囲み、`finally { S._starting = false; }` で確実クリア
-  2. `micQ()` / `micReading()` を `async` 化し `await startListening(...)` に変更
-- **状態**: 修正済み（push予定）
+## バグ #1 — startListening の async化 + getUserMedia占有により音声認識が機能停止
+- **日付**: 2025-06-30 (commit 4e41ba4 で発生、3178e4e で悪化)
+- **症状**: マイクはOnになるが、吹き込んだ声が一切検知されない
+- **原因**: `ensureMicPermission()` が `getUserMedia` でマイクストリームを占有 → `SpeechRecognition` に音声が渡らない。ブラウザの音声入力は排他的で、getUserMediaのストリームが残っているとSpeechRecognitionが音声を受け取れない。
+- **やったこと**: 4e41ba4で同期関数をasync化してensureMicPermissionを追加。3178e4eでtry-finallyを追加したが、getUserMediaのストリーム占有問題は解決せず。
+- **修正**: startListening全体を6891f59当時の元の同期版に完全復元。getUserMediaをstartListening内で呼ばない（SpeechRecognition自体がマイク許可を管理するため不要）。
+- **状態**: 修正済み（6891f59と完全一致確認済み）
+- **教訓**: **SpeechRecognitionとgetUserMediaを同時に使うな。** SpeechRecognitionは単独でマイク許可を要求・取得できる。getUserMediaでの事前取得は不要であり、かえって害がある。
 
 ## バグ #2 — goQ1の変更後に録音不能が発覚（バグ#1と同一原因の可能性高い）
 - **日付**: 2025-06-30 (commit 79a153f 後に発覚)
