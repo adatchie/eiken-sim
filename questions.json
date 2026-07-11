@@ -2073,5 +2073,64 @@
         ]
       }
     ]
+  },
+  {
+    "id": "33",
+    "title": "Handball",
+    "emoji": "🤾",
+    "image": "assets/33_illustration.jpg",
+    "passage": "Handball is a well-known team sport. Handball players need to jump and throw the ball quickly, so they practice very hard with their teammates. Some high schools in Japan have excellent handball teams.",
+    "passage_q": {
+      "q": "Why do handball players practice very hard with their teammates?",
+      "a": "Because they need to jump and throw the ball quickly.",
+      "keywords": [
+        "jump",
+        "throw",
+        "ball",
+        "quickly"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the picture. How many boys are standing?",
+        "a": "Three boys are standing.",
+        "keywords": [
+          "three",
+          "3",
+          "boys",
+          "standing"
+        ]
+      },
+      {
+        "q": "Please look at the woman wearing glasses. What is she going to do?",
+        "a": "She's going to open the door.",
+        "keywords": [
+          "open",
+          "door"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "What did you do last weekend?",
+        "a": "I went to a food festival.",
+        "keywords": [
+          "weekend",
+          "went",
+          "festival",
+          "did"
+        ]
+      },
+      {
+        "q": "Have you ever been to a farm?",
+        "a": "Yes, I have. / No, I haven't.",
+        "keywords": [
+          "yes",
+          "no",
+          "farm",
+          "animals"
+        ]
+      }
+    ]
   }
 ]
