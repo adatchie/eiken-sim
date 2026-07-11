@@ -441,7 +441,7 @@
     "id": "08",
     "title": "International Food",
     "emoji": "🍴",
-    "image": "assets/08_illustration.png",
+    "image": "assets/08_illustration.jpg",
     "passage": "Tokyo has many kinds of restaurants. You can eat Italian, Indian, Chinese, and many other foods. Some people enjoy trying food from different countries. International food is popular because it is fun to taste new flavors. Food festivals are held in Tokyo every year. Many people visit them to enjoy delicious food from around the world.",
     "passage_q": {
       "q": "Why is international food popular?",
@@ -506,7 +506,7 @@
     "id": "09",
     "title": "Fun at Airports",
     "emoji": "✈️",
-    "image": "assets/09_illustration.jpg",
+    "image": "assets/09_illustration.png",
     "source_url": "https://nicksenglish.com/eiken/interview/eiken_3_interview_fun_at_airports",
     "passage": "Airports are popular places to go for a day trip. Because airplanes leave every few minutes, children can enjoy watching them. Some people like to take photos. There are also shops, restaurants and play areas.",
     "passage_q": {
@@ -1408,64 +1408,668 @@
   },
   {
     "id": "22",
-    "title": "Listening to the Radio",
-    "emoji": "📻",
-    "image": "assets/22_illustration.webp",
-    "source_url": "https://www.eiken.or.jp/eiken/exam/virtual/grade_3/pdf/grade_3.pdf",
-    "passage": "There are many kinds of radio programs. People often enjoy listening to sports or their favorite songs. People can learn English and other languages from the radio, so it is very useful.",
+    "title": "Chorus Contests",
+    "emoji": "🎵",
+    "image": "assets/22_illustration.jpg",
+    "passage": "Chorus contests are often held for junior high school students. Some students want to win first prize, so they practice singing together for many days. These contests help students to learn about teamwork.",
     "passage_q": {
-      "q": "Please look at the passage. What can people learn from the radio?",
-      "a": "They can learn English and other languages from the radio.",
+      "q": "Why do some students practice singing together for many days?",
+      "a": "Because they want to win first prize.",
       "keywords": [
-        "english",
-        "other",
-        "languages",
-        "learn",
-        "radio"
+        "win",
+        "first",
+        "prize"
       ]
     },
     "illustration_qs": [
       {
-        "q": "Now, please look at the picture. What is the man going to do?",
-        "a": "He's going to read a newspaper.",
-        "keywords": [
-          "read",
-          "newspaper",
-          "going",
-          "man"
-        ]
-      },
-      {
-        "q": "How many cups are there on the table?",
-        "a": "There are two cups on the table.",
+        "q": "Now, please look at the picture. How many people are wearing school uniforms?",
+        "a": "Two people are wearing school uniforms.",
         "keywords": [
           "two",
           "2",
-          "cups",
-          "table"
+          "uniform"
+        ]
+      },
+      {
+        "q": "Please look at the woman wearing a helmet. What is she doing?",
+        "a": "She's riding a bike.",
+        "keywords": [
+          "riding",
+          "bike",
+          "bicycle"
         ]
       }
     ],
     "personal_qs": [
       {
-        "q": "What do you like to do on weekends?",
-        "a": "I like to play tennis.",
+        "q": "What do you like to have for breakfast?",
+        "a": "I like to have some eggs.",
         "keywords": [
-          "like",
-          "play",
-          "tennis",
-          "weekends"
+          "eggs",
+          "bread",
+          "rice",
+          "breakfast"
         ]
       },
       {
-        "q": "Have you ever been to a foreign country?",
-        "a": "Yes. I've been to America.",
+        "q": "Do you like to visit science museums?",
+        "a": "Yes, I do. / No, I don't.",
         "keywords": [
           "yes",
-          "been",
-          "america",
-          "foreign",
-          "country"
+          "no",
+          "science",
+          "museum",
+          "learn"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "title": "Dance Lessons",
+    "emoji": "💃",
+    "image": "assets/23_illustration.jpg",
+    "passage": "Dancing is popular among children. Children in Japan often learn how to do traditional Japanese dances at school. Some people want to take part in dance competitions, so they take lessons at dance schools.",
+    "passage_q": {
+      "q": "Why do some people take lessons at dance schools?",
+      "a": "Because they want to take part in dance competitions.",
+      "keywords": [
+        "take",
+        "part",
+        "dance",
+        "competitions"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the picture. What is the man wearing a hat holding?",
+        "a": "He's holding a cat.",
+        "keywords": [
+          "holding",
+          "cat"
+        ]
+      },
+      {
+        "q": "Please look at the girl with long hair. What is she going to do?",
+        "a": "She's going to throw the ball.",
+        "keywords": [
+          "throw",
+          "ball"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "What are you planning to do this summer?",
+        "a": "I'm planning to go to a concert.",
+        "keywords": [
+          "planning",
+          "summer",
+          "go",
+          "visit",
+          "concert"
+        ]
+      },
+      {
+        "q": "Have you ever been to a zoo?",
+        "a": "Yes, I have. / No, I haven't.",
+        "keywords": [
+          "yes",
+          "no",
+          "zoo",
+          "animals"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "title": "Swimming",
+    "emoji": "🏊",
+    "image": "assets/24_illustration.jpg",
+    "passage": "In Japan, most children learn to swim in elementary school. Some children are very fast swimmers, so they like to take part in swimming races. Swimming is an excellent way for people to stay healthy.",
+    "passage_q": {
+      "q": "Why do some children like to take part in swimming races?",
+      "a": "Because they are very fast swimmers.",
+      "keywords": [
+        "fast",
+        "swimmers",
+        "races"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the picture. How many people are holding umbrellas?",
+        "a": "Two people are holding umbrellas.",
+        "keywords": [
+          "two",
+          "2",
+          "umbrellas"
+        ]
+      },
+      {
+        "q": "Please look at the boy wearing a cap. What is he doing?",
+        "a": "He's getting on a bus.",
+        "keywords": [
+          "getting",
+          "on",
+          "bus"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "What are you going to do tomorrow?",
+        "a": "I'm going to visit my uncle.",
+        "keywords": [
+          "tomorrow",
+          "going",
+          "visit",
+          "do"
+        ]
+      },
+      {
+        "q": "Do you often go to a movie theater?",
+        "a": "Yes, I do. / No, I don't.",
+        "keywords": [
+          "yes",
+          "no",
+          "movie",
+          "theater",
+          "cinema"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "title": "Vegetable Juice",
+    "emoji": "🥕",
+    "image": "assets/25_illustration.jpg",
+    "passage": "Vegetable juice is sold in many supermarkets. It can be made with different vegetables, such as carrots. Some people like making healthy drinks at home, so they learn how to make vegetable juice.",
+    "passage_q": {
+      "q": "Why do some people learn how to make vegetable juice?",
+      "a": "Because they like making healthy drinks at home.",
+      "keywords": [
+        "healthy",
+        "drinks",
+        "home",
+        "make"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the picture. How many bags is the man holding?",
+        "a": "He's holding two bags.",
+        "keywords": [
+          "two",
+          "2",
+          "bags"
+        ]
+      },
+      {
+        "q": "Please look at the girl wearing a cap. What is she going to do?",
+        "a": "She's going to buy some sandwiches.",
+        "keywords": [
+          "buy",
+          "sandwiches",
+          "juice",
+          "drink"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "What did you do last Sunday?",
+        "a": "I went to an amusement park.",
+        "keywords": [
+          "sunday",
+          "went",
+          "park",
+          "did"
+        ]
+      },
+      {
+        "q": "Do you like to go to the library?",
+        "a": "Yes, I do. / No, I don't.",
+        "keywords": [
+          "yes",
+          "no",
+          "library",
+          "study",
+          "read",
+          "books"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "title": "London",
+    "emoji": "🎡",
+    "image": "assets/26_illustration.jpg",
+    "passage": "London is a large city in England. It is famous for its old buildings and beautiful parks. Many people are interested in art or history, so they enjoy going to museums when they visit London.",
+    "passage_q": {
+      "q": "Why do many people enjoy going to museums when they visit London?",
+      "a": "Because they are interested in art or history.",
+      "keywords": [
+        "interested",
+        "art",
+        "history",
+        "museums"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the picture. How many people are sitting on the sofa?",
+        "a": "Three people are sitting on the sofa.",
+        "keywords": [
+          "three",
+          "3",
+          "sofa"
+        ]
+      },
+      {
+        "q": "Please look at the man. What is he going to do?",
+        "a": "He's going to cut some bread.",
+        "keywords": [
+          "cut",
+          "bread",
+          "slice"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "What are you planning to do this spring?",
+        "a": "I'm planning to see my cousins.",
+        "keywords": [
+          "planning",
+          "spring",
+          "see",
+          "visit",
+          "cousins"
+        ]
+      },
+      {
+        "q": "Do you like to eat at restaurants?",
+        "a": "Yes, I do. / No, I don't.",
+        "keywords": [
+          "yes",
+          "no",
+          "restaurants",
+          "eat",
+          "food"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "title": "Baseball Caps",
+    "emoji": "⚾",
+    "image": "assets/27_illustration.jpg",
+    "passage": "Baseball caps are popular in Japan. Baseball fans often wear them at stadiums when they watch their favorite teams. Some people worry about strong sunlight, so they wear baseball caps on hot summer days.",
+    "passage_q": {
+      "q": "Why do some people wear baseball caps on hot summer days?",
+      "a": "Because they worry about strong sunlight.",
+      "keywords": [
+        "worry",
+        "strong",
+        "sunlight",
+        "sun"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the picture. How many people are sitting under the tree?",
+        "a": "Two people are sitting under the tree.",
+        "keywords": [
+          "two",
+          "2",
+          "tree",
+          "sitting"
+        ]
+      },
+      {
+        "q": "Please look at the girl with long hair. What is she going to do?",
+        "a": "She's going to throw the ball.",
+        "keywords": [
+          "throw",
+          "ball"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "What time do you usually go to bed?",
+        "a": "I go to bed at ten.",
+        "keywords": [
+          "time",
+          "bed",
+          "sleep",
+          "ten",
+          "eleven",
+          "twelve"
+        ]
+      },
+      {
+        "q": "Have you ever been to a zoo?",
+        "a": "Yes, I have. / No, I haven't.",
+        "keywords": [
+          "yes",
+          "no",
+          "zoo",
+          "animals"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "title": "Flower Shops",
+    "emoji": "🌸",
+    "image": "assets/28_illustration.jpg",
+    "passage": "There are many flower shops in Japan. They sell different types of colorful flowers. Many people like to keep beautiful flowers in their homes, so they go shopping for flowers each season.",
+    "passage_q": {
+      "q": "Why do many people go shopping for flowers each season?",
+      "a": "Because they like to keep beautiful flowers in their homes.",
+      "keywords": [
+        "keep",
+        "beautiful",
+        "flowers",
+        "homes"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the picture. Where is the cat?",
+        "a": "It's on the chair.",
+        "keywords": [
+          "chair",
+          "on",
+          "cat"
+        ]
+      },
+      {
+        "q": "Please look at the woman with long hair. What is she going to do?",
+        "a": "She's going to open a box.",
+        "keywords": [
+          "open",
+          "box"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "What time do you usually get up on weekdays?",
+        "a": "I get up at seven.",
+        "keywords": [
+          "time",
+          "get",
+          "up",
+          "seven",
+          "six",
+          "eight"
+        ]
+      },
+      {
+        "q": "Are you a student?",
+        "a": "Yes, I am. / No, I'm not.",
+        "keywords": [
+          "yes",
+          "no",
+          "student",
+          "study",
+          "school"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "title": "Pets",
+    "emoji": "🐕",
+    "image": "assets/29_illustration.jpg",
+    "passage": "Many people want to have a pet dog. Playing with dogs can be relaxing. Some people don't have time to take dogs for walks, so they get pets such as hamsters or birds.",
+    "passage_q": {
+      "q": "Why do some people get pets such as hamsters or birds?",
+      "a": "Because they don't have time to take dogs for walks.",
+      "keywords": [
+        "time",
+        "walks",
+        "dogs",
+        "hamsters",
+        "birds"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the picture. How many people are wearing hats?",
+        "a": "Three people are wearing hats.",
+        "keywords": [
+          "three",
+          "3",
+          "hats"
+        ]
+      },
+      {
+        "q": "Please look at the man. What is he doing?",
+        "a": "He's cooking.",
+        "keywords": [
+          "cooking",
+          "grill",
+          "barbecue",
+          "food"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "What did you do last Sunday?",
+        "a": "I played with my cousins.",
+        "keywords": [
+          "sunday",
+          "played",
+          "cousins",
+          "did"
+        ]
+      },
+      {
+        "q": "Do you like shopping in your free time?",
+        "a": "Yes, I do. / No, I don't.",
+        "keywords": [
+          "yes",
+          "no",
+          "shopping",
+          "buy",
+          "free",
+          "time"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "title": "Singing",
+    "emoji": "🎤",
+    "image": "assets/30_illustration.jpg",
+    "passage": "Singing can be a good way to relax. Some people enjoy performing in front of many people, so they join singing groups or bands. Taking singing lessons can help people to sing better.",
+    "passage_q": {
+      "q": "Why do some people join singing groups or bands?",
+      "a": "Because they enjoy performing in front of many people.",
+      "keywords": [
+        "enjoy",
+        "performing",
+        "front",
+        "people"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the picture. How many books are there on the bench?",
+        "a": "There are two books on the bench.",
+        "keywords": [
+          "two",
+          "2",
+          "books",
+          "bench"
+        ]
+      },
+      {
+        "q": "Please look at the boy. What is he doing?",
+        "a": "He's drawing.",
+        "keywords": [
+          "drawing",
+          "writing",
+          "sketching"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "Where do you often go on weekends?",
+        "a": "I go to the shopping mall.",
+        "keywords": [
+          "weekends",
+          "go",
+          "mall",
+          "park",
+          "library"
+        ]
+      },
+      {
+        "q": "Have you ever been to a beach?",
+        "a": "Yes, I have. / No, I haven't.",
+        "keywords": [
+          "yes",
+          "no",
+          "beach",
+          "sea",
+          "ocean"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "title": "Umbrellas",
+    "emoji": "☂️",
+    "image": "assets/31_illustration.jpg",
+    "passage": "Umbrellas are very useful. They help people to stay dry on rainy days. Department stores sell different kinds of colorful umbrellas, and convenience stores are good places to buy cheap and simple ones.",
+    "passage_q": {
+      "q": "What do department stores sell?",
+      "a": "They sell different kinds of colorful umbrellas.",
+      "keywords": [
+        "colorful",
+        "umbrellas",
+        "department",
+        "stores"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the picture. How many cars are there in front of the store?",
+        "a": "There are two cars in front of the store.",
+        "keywords": [
+          "two",
+          "2",
+          "cars",
+          "store"
+        ]
+      },
+      {
+        "q": "Please look at the girl wearing a cap. What is she doing?",
+        "a": "She's running.",
+        "keywords": [
+          "running",
+          "jogging"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "How many hours do you sleep every night?",
+        "a": "I sleep about eight hours.",
+        "keywords": [
+          "hours",
+          "sleep",
+          "eight",
+          "seven",
+          "six",
+          "night"
+        ]
+      },
+      {
+        "q": "Do you like to travel?",
+        "a": "Yes, I do. / No, I don't.",
+        "keywords": [
+          "yes",
+          "no",
+          "travel",
+          "trip"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "title": "Playing the Guitar",
+    "emoji": "🎸",
+    "image": "assets/32_illustration.jpg",
+    "passage": "Playing the guitar is a popular hobby. Many people want to learn how to play their favorite songs, so they practice playing the guitar every day. Some people take lessons with a guitar teacher.",
+    "passage_q": {
+      "q": "Why do many people practice playing the guitar every day?",
+      "a": "Because they want to learn how to play their favorite songs.",
+      "keywords": [
+        "learn",
+        "play",
+        "favorite",
+        "songs"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the picture. How many children are there under the tree?",
+        "a": "There are two children under the tree.",
+        "keywords": [
+          "two",
+          "2",
+          "children",
+          "tree"
+        ]
+      },
+      {
+        "q": "Please look at the boy wearing a cap. What is he going to do?",
+        "a": "He's going to kick the ball.",
+        "keywords": [
+          "kick",
+          "ball"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "What did you do last weekend?",
+        "a": "I went to a basketball game.",
+        "keywords": [
+          "weekend",
+          "went",
+          "basketball",
+          "game",
+          "did"
+        ]
+      },
+      {
+        "q": "Do you often go to a movie theater?",
+        "a": "Yes, I do. / No, I don't.",
+        "keywords": [
+          "yes",
+          "no",
+          "movie",
+          "theater",
+          "cinema"
         ]
       }
     ]
