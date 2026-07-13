@@ -8,7 +8,7 @@
 // ============================================================
 
 // ── 問題データ ──────────────────────────────────────────
-const QUESTION_SETS = [
+const QUESTION_SETS_3 = [
 {
   "id": "01",
   "title": "Cycling in Denmark",
@@ -2145,6 +2145,706 @@ const QUESTION_SETS = [
 }
 ];
 
+const QUESTION_SETS_PRE2 = [
+  {
+    "id": "pre2_01",
+    "title": "Remote Work",
+    "emoji": "💻",
+    "image": "assets/pre2_01_illustration.jpg",
+    "passage": "The internet has changed how some people do their jobs. For example, company employees can now work from home on a computer or tablet, so they don’t need to go into an office every day. This is called remote work. As a result, people spend less time traveling and more time at home with their families.",
+    "passage_q": {
+      "q": "According to the passage, why don’t company employees need to go into an office every day?",
+      "a": "Because they can now work from home on a computer or tablet.",
+      "keywords": [
+        "because",
+        "now",
+        "work",
+        "home",
+        "computer",
+        "tablet"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the people in Picture A. They are doing different things. Tell me as much as you can about what they are doing.",
+        "a": "A man is using the computer. A boy is turning on the TV. A woman is vacuuming the carpet. A girl is talking on the phone. A baby is crying.",
+        "keywords": [
+          "man",
+          "using",
+          "computer",
+          "boy",
+          "turning",
+          "woman"
+        ]
+      },
+      {
+        "q": "Now, look at the man in Picture B. Please describe the situation.",
+        "a": "He can’t sit down because there are too many people on the train.",
+        "keywords": [
+          "sit",
+          "down",
+          "because",
+          "too",
+          "many",
+          "people"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "Do you think working at home is better than working in an office?",
+        "a": "No. I think working in an office is better because you can talk to other people. Also, walking to the train station is good exercise.",
+        "keywords": [
+          "think",
+          "working",
+          "office",
+          "better",
+          "because",
+          "talk"
+        ]
+      },
+      {
+        "q": "These days, a lot of people play video games. Do you play video games?",
+        "a": "Yes, I play games on my computer every night. I like to play games because they help me to relax.",
+        "keywords": [
+          "yes",
+          "play",
+          "games",
+          "computer",
+          "every",
+          "night"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pre2_02",
+    "title": "Visit Museums from Home",
+    "emoji": "🏛️",
+    "image": "assets/pre2_02_illustration.jpg",
+    "passage": "Recently, museums have started to make use of information technology. As a result, people are able to visit them on the internet. Visitors can ask tour guides to carry smartphones that record each tour, and in this way, they can experience a museum from home. Virtual tours will be more common in the future.",
+    "passage_q": {
+      "q": "According to the passage, how can visitors experience a museum from home?",
+      "a": "By asking tour guides to carry smartphones that record each tour.",
+      "keywords": [
+        "asking",
+        "tour",
+        "guides",
+        "carry",
+        "smartphones",
+        "record"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the people in Picture A. They are doing different things. Tell me as much as you can about what they are doing.",
+        "a": "A man is looking at a painting. A girl is sitting on a bench. A girl is playing with a robot. Two men are shaking hands. A woman is cleaning her glasses.",
+        "keywords": [
+          "man",
+          "looking",
+          "painting",
+          "girl",
+          "sitting",
+          "bench"
+        ]
+      },
+      {
+        "q": "Now, look at the girl in Picture B. Please describe the situation.",
+        "a": "She can’t call her mother because her smartphone has no battery.",
+        "keywords": [
+          "call",
+          "mother",
+          "because",
+          "smartphone",
+          "battery"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "Do you think more people should go to museums?",
+        "a": "Yes. There are many kinds of museums, for example, art and science museums. People can learn a lot by visiting them.",
+        "keywords": [
+          "yes",
+          "many",
+          "kinds",
+          "museums",
+          "example",
+          "art"
+        ]
+      },
+      {
+        "q": "Today, many people read the news on the internet. Do you read the news on the internet?",
+        "a": "Yes, I think it is important to know what is happening in the world. Also, it’s interesting to talk about the news with other people.",
+        "keywords": [
+          "yes",
+          "think",
+          "important",
+          "know",
+          "what",
+          "happening"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pre2_03",
+    "title": "Sumo Wrestling in the US",
+    "emoji": "🤼",
+    "image": "assets/pre2_03_illustration.jpg",
+    "passage": "Today, more and more cities in the US are forming sumo wrestling clubs. Sumo is one of the world’s oldest combat sports. People go to sumo events held by Japanese culture societies, and in this way, they learn more about the Japanese way of life. As a result, people have become more interested in Japan.",
+    "passage_q": {
+      "q": "According to the passage, how do people learn more about the Japanese way of life?",
+      "a": "By going to sumo events held by Japanese culture societies.",
+      "keywords": [
+        "going",
+        "sumo",
+        "events",
+        "held",
+        "japanese",
+        "culture"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the people in Picture A. They are doing different things. Tell me as much as you can about what they are doing.",
+        "a": "A woman is carrying a tray of sandwiches. A man is reading a newspaper. A boy is playing with cards. A man is waving a flag. A woman is pouring a cup of tea.",
+        "keywords": [
+          "woman",
+          "carrying",
+          "tray",
+          "sandwiches",
+          "man",
+          "reading"
+        ]
+      },
+      {
+        "q": "Now, look at the boy in Picture B. Please describe the situation.",
+        "a": "He is thinking of going to Japan.",
+        "keywords": [
+          "thinking",
+          "going",
+          "japan"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "Do you think more people should play sports?",
+        "a": "Yes. Doing exercise is good for your health. Also, it’s fun to play sports with friends.",
+        "keywords": [
+          "yes",
+          "doing",
+          "exercise",
+          "good",
+          "health",
+          "also"
+        ]
+      },
+      {
+        "q": "These days, a lot of people watch foreign TV shows? Do you like to watch foreign TV shows?",
+        "a": "Yes. I enjoy watching foreign TV shows. They’re interesting and I can improve my English.",
+        "keywords": [
+          "yes",
+          "enjoy",
+          "watching",
+          "foreign",
+          "shows",
+          "interesting"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pre2_04",
+    "title": "Animal Hospitals",
+    "emoji": "🏥",
+    "image": "assets/pre2_04_illustration.jpg",
+    "passage": "Recently, more people in Japan are choosing to have pets, such as cats and dogs. Many people consider pets members of the family, so they want to get the best health care for them. As a result, new animal clinics are opening across the country. These clinics will help pets live longer in the future.",
+    "passage_q": {
+      "q": "According to the passage, why do people want to get the best health care for their pets?",
+      "a": "Because they consider pets members of the family.",
+      "keywords": [
+        "because",
+        "consider",
+        "pets",
+        "members",
+        "family"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the people in Picture A. They are doing different things. Tell me as much as you can about what they are doing.",
+        "a": "A boy is feeding some birds. A woman is holding a dog. Two girls are playing with a cat. A woman is picking up a box. A man is opening a cage.",
+        "keywords": [
+          "boy",
+          "feeding",
+          "birds",
+          "woman",
+          "holding",
+          "dog"
+        ]
+      },
+      {
+        "q": "Now, look at the woman in Picture B. Please describe the situation.",
+        "a": "She can’t take the dog for a walk because it is raining.",
+        "keywords": [
+          "take",
+          "dog",
+          "walk",
+          "because",
+          "raining"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "Do you think having a pet is a good idea?",
+        "a": "Yes. Taking a dog for a walk is good exercise. Also, pets can stop you feeling lonely.",
+        "keywords": [
+          "yes",
+          "taking",
+          "dog",
+          "walk",
+          "good",
+          "exercise"
+        ]
+      },
+      {
+        "q": "These days, more people are reading electronic books. Do you read electronic books?",
+        "a": "Yes. Electronic books are lighter and more convenient than paper books. Also, it’s cheaper to download an electronic book.",
+        "keywords": [
+          "yes",
+          "electronic",
+          "books",
+          "lighter",
+          "more",
+          "convenient"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pre2_05",
+    "title": "Subscription Services",
+    "emoji": "📦",
+    "image": "assets/pre2_05_illustration.jpg",
+    "passage": "These days, subscription services are becoming more common. For example, people can pay a monthly fee for music, movies or video games. Overseas customers can even join a subscription service for Japanese sweets and snacks, so they can get a new box of treats delivered from Japan every month.",
+    "passage_q": {
+      "q": "According to the passage, how can overseas customers get a new box of treats delivered from Japan every month?",
+      "a": "By joining a subscription service for Japanese sweets and snacks.",
+      "keywords": [
+        "joining",
+        "subscription",
+        "service",
+        "japanese",
+        "sweets",
+        "snacks"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the people in Picture A. They are doing different things. Tell me as much as you can about what they are doing.",
+        "a": "A girl is drawing a picture. A woman is making a cake. A man is putting sweets into a box. A woman is wrapping a box. A man is riding a bicycle.",
+        "keywords": [
+          "girl",
+          "drawing",
+          "picture",
+          "woman",
+          "making",
+          "cake"
+        ]
+      },
+      {
+        "q": "Now, look at the man in Picture B. Please describe the situation.",
+        "a": "He can’t use the computer because he forgot his password.",
+        "keywords": [
+          "use",
+          "computer",
+          "because",
+          "forgot",
+          "password"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "Do you think more people will use subscription services in the future?",
+        "a": "Yes. Subscription services are usually cheap and convenient. Also, the internet will have more and more services in the future.",
+        "keywords": [
+          "yes",
+          "subscription",
+          "services",
+          "usually",
+          "cheap",
+          "convenient"
+        ]
+      },
+      {
+        "q": "There are many campsites in Japan. Do you like to go camping?",
+        "a": "No. I like nature, but it’s too hot to go camping in the summer. Also, there are too many insects in Japan.",
+        "keywords": [
+          "like",
+          "nature",
+          "too",
+          "hot",
+          "camping",
+          "summer"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pre2_06",
+    "title": "Face Masks for Fashion",
+    "emoji": "🎭",
+    "image": "assets/pre2_06_illustration.jpg",
+    "passage": "People in Japan usually wear a face mask to protect their health. These days, however, some people are wearing face masks as a fashion accessory. Clothing companies want to find new customers for their products, so they make masks with interesting colors and designs. These new face masks are a popular fashion item.",
+    "passage_q": {
+      "q": "According to the passage, why do clothing companies make masks with interesting colors and designs?",
+      "a": "Because they want to find new customers for their products.",
+      "keywords": [
+        "because",
+        "want",
+        "find",
+        "new",
+        "customers",
+        "products"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the people in Picture A. They are doing different things. Tell me as much as you can about what they are doing.",
+        "a": "A man is buying a mask. A man is pushing a cart. A woman is putting a book on a shelf. A girl is looking at a dress. A woman is carrying shopping bags.",
+        "keywords": [
+          "man",
+          "buying",
+          "mask",
+          "pushing",
+          "cart",
+          "woman"
+        ]
+      },
+      {
+        "q": "Now, look at the man in Picture B. Please describe the situation.",
+        "a": "He wants to go to the gym, but he forgot to bring his mask.",
+        "keywords": [
+          "wants",
+          "gym",
+          "forgot",
+          "bring",
+          "mask"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "Do you think people will wear masks in the future?",
+        "a": "Yes. Masks help to stop people getting sick. Also, masks keep your face warm in the winter.",
+        "keywords": [
+          "yes",
+          "masks",
+          "help",
+          "stop",
+          "people",
+          "getting"
+        ]
+      },
+      {
+        "q": "There are many fast food restaurants in Japan. Do you like to eat fast food?",
+        "a": "Yes. McDonald's is my favorite. I think it's cheap and delicious. Also, it's easier to buy dinner at a fast food restaurant than to cook at home.",
+        "keywords": [
+          "yes",
+          "mcdonald",
+          "favorite",
+          "think",
+          "cheap",
+          "delicious"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pre2_07",
+    "title": "Reducing Plastic Waste",
+    "emoji": "♻️",
+    "image": "assets/pre2_07_illustration.jpg",
+    "passage": "Today, people in Japan are using fewer plastic shopping bags. They also want to use fewer plastic bottles. Some people use a smartphone app called “mymizu” to find the location of water fountains. This way, they can refill a used bottle instead of buying a new one. By using less plastic, we can help protect the environment.",
+    "passage_q": {
+      "q": "According to the passage, how can people refill a used bottle instead of buying a new one?",
+      "a": "By using a smartphone app called “mymizu” to find the location of water fountains.",
+      "keywords": [
+        "using",
+        "smartphone",
+        "app",
+        "called",
+        "mymizu",
+        "find"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the people in Picture A. They are doing different things. Tell me as much as you can about what they are doing.",
+        "a": "A girl is flying a kite. A woman is picking up some trash. Two boys are playing soccer. A man is fixing a fence. A man is walking a dog.",
+        "keywords": [
+          "girl",
+          "flying",
+          "kite",
+          "woman",
+          "picking",
+          "trash"
+        ]
+      },
+      {
+        "q": "Now, look at the girl in Picture B. Please describe the situation.",
+        "a": "She wants to buy a drink, but she doesn’t have any money.",
+        "keywords": [
+          "wants",
+          "buy",
+          "drink",
+          "doesn",
+          "any",
+          "money"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "Do you think people throw out too much garbage?",
+        "a": "Yes. Garbage is bad for the environment. People should try to recycle more.",
+        "keywords": [
+          "yes",
+          "garbage",
+          "bad",
+          "environment",
+          "people",
+          "should"
+        ]
+      },
+      {
+        "q": "These days, many people cycle to school and work. Do you ride a bike?",
+        "a": "No. I usually work from home so I don’t need a bike. Also, there’s a bus stop near my house which I can use.",
+        "keywords": [
+          "usually",
+          "work",
+          "home",
+          "don",
+          "need",
+          "bike"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pre2_08",
+    "title": "Protecting Farms",
+    "emoji": "🌾",
+    "image": "assets/pre2_08_illustration.jpg",
+    "passage": "Recently, many farmers in Japan's countryside are struggling to protect their crops from wild animals. As a result, they are trying to find new ways to keep monkeys, boars and other animals away. In some villages, farmers are working together and helping their neighbors. In this way, they are able to protect their farms.",
+    "passage_q": {
+      "q": "According to the passage, how are farmers able to protect their farms?",
+      "a": "By working together and helping their neighbors.",
+      "keywords": [
+        "working",
+        "together",
+        "helping",
+        "neighbors"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the people in Picture A. They are doing different things. Tell me as much as you can about what they are doing.",
+        "a": "Two men are putting up a fence. A woman is digging a hole. A man is holding a gun. A woman is picking apples. A man is planting vegetables.",
+        "keywords": [
+          "two",
+          "men",
+          "putting",
+          "fence",
+          "woman",
+          "digging"
+        ]
+      },
+      {
+        "q": "Now, look at the man in Picture B. Please describe the situation.",
+        "a": "He can't go hiking because there is a bear on the mountain.",
+        "keywords": [
+          "hiking",
+          "because",
+          "bear",
+          "mountain"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "Do you think more people should live in the countryside?",
+        "a": "Yes. I think living in the countryside is more relaxing than living in the city. Also, you can enjoy nature.",
+        "keywords": [
+          "yes",
+          "think",
+          "living",
+          "countryside",
+          "more",
+          "relaxing"
+        ]
+      },
+      {
+        "q": "The Olympic Games take place every four years. Do you like to watch the Olympics?",
+        "a": "Yes. I like to watch the Olympics on TV. My favorite events are basketball and hockey.",
+        "keywords": [
+          "yes",
+          "like",
+          "watch",
+          "olympics",
+          "favorite",
+          "events"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pre2_09",
+    "title": "Traditional Japanese Crafts",
+    "emoji": "🏺",
+    "image": "assets/pre2_09_illustration.jpg",
+    "passage": "These days, traditional Japanese crafts, like pottery, textiles and papermaking, are being taught on the Internet. The teachers are usually older people who have mastered each craft. These experienced craftspeople want to pass their knowledge and skills to young people, so they teach their craft in online lessons. These lessons are becoming more popular.",
+    "passage_q": {
+      "q": "According to the passage, why do experienced craftspeople teach their craft in online lessons?",
+      "a": "Because they want to pass their knowledge and skills to young people.",
+      "keywords": [
+        "because",
+        "want",
+        "pass",
+        "knowledge",
+        "skills",
+        "young"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the people in Picture A. They are doing different things. Tell me as much as you can about what they are doing.",
+        "a": "A man is taking a photo. Two women are moving a table. A man is cutting some wood. A woman is taking notes. A boy is studying online.",
+        "keywords": [
+          "man",
+          "taking",
+          "photo",
+          "two",
+          "women",
+          "moving"
+        ]
+      },
+      {
+        "q": "Now, look at the man in Picture B. Please describe the situation.",
+        "a": "He is thinking of making a birdhouse.",
+        "keywords": [
+          "thinking",
+          "making",
+          "birdhouse"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "Do you think it’s important to learn from older people?",
+        "a": "Yes. I think older people can teach us many things. Also, we can learn from their mistakes.",
+        "keywords": [
+          "yes",
+          "think",
+          "older",
+          "people",
+          "teach",
+          "many"
+        ]
+      },
+      {
+        "q": "Summer in Japan is very hot. Do you like summer?",
+        "a": "Yes. I like summer because I can go swimming in the sea. Also, I can go to festivals and watch fireworks.",
+        "keywords": [
+          "yes",
+          "like",
+          "summer",
+          "because",
+          "swimming",
+          "sea"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "pre2_10",
+    "title": "Cleaning in Japan",
+    "emoji": "🧹",
+    "image": "assets/pre2_10_illustration.jpg",
+    "passage": "In Japan, cleaning is very important. People keep their houses and public places neat and tidy, and in this way, they show respect for their communities. They take off their shoes when they go inside someone's house and there are rules about keeping streets and parks clean. People also join neighborhood clean-up events.",
+    "passage_q": {
+      "q": "According to the passage, how do people show respect for their communities?",
+      "a": "By keeping their houses and public places neat and tidy.",
+      "keywords": [
+        "keeping",
+        "houses",
+        "public",
+        "places",
+        "neat",
+        "tidy"
+      ]
+    },
+    "illustration_qs": [
+      {
+        "q": "Now, please look at the people in Picture A. They are doing different things. Tell me as much as you can about what they are doing.",
+        "a": "A man is mopping the floor. Two girls are washing a dog. A woman is hanging up a towel. A woman is diving into the pool. A boy is taking a shower.",
+        "keywords": [
+          "man",
+          "mopping",
+          "floor",
+          "two",
+          "girls",
+          "washing"
+        ]
+      },
+      {
+        "q": "Now, look at the man in Picture B. Please describe the situation.",
+        "a": "He is hot because he forgot to bring his hat.",
+        "keywords": [
+          "hot",
+          "because",
+          "forgot",
+          "bring",
+          "hat"
+        ]
+      }
+    ],
+    "personal_qs": [
+      {
+        "q": "Do you think children should do more cleaning at home?",
+        "a": "Yes. I think children should help their parents. Also, they can practice for the future.",
+        "keywords": [
+          "yes",
+          "think",
+          "children",
+          "should",
+          "help",
+          "parents"
+        ]
+      },
+      {
+        "q": "These days, there are many options for healthy eating. Do you eat a lot of",
+        "a": "No. I don’t like vegetables very much. I like to eat fast food because it is more delicious.",
+        "keywords": [
+          "don",
+          "like",
+          "vegetables",
+          "very",
+          "much",
+          "eat"
+        ]
+      }
+    ]
+  }
+];
+
+let QUESTION_SETS = [];
+
+
 // ── STATE ──────────────────────────────────────────────
 const S = {
   setId: null, answers: [], transcript: '',
@@ -2164,7 +2864,7 @@ function esc(s) { return String(s).replace(/'/g, "\\'"); }
 document.addEventListener('DOMContentLoaded', () => {
   loadVoices();
   if (speechSynthesis) speechSynthesis.onvoiceschanged = loadVoices;
-  showMenu();
+  showGradeSelection();
 });
 
 // ── VOICES ─────────────────────────────────────────────
@@ -2391,7 +3091,7 @@ function showMenu() {
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
   render(
     '<div class="screen">' +
-    '<h1>🎓 英検3級<br>Speaking Simulator</h1>' +
+    '<h1>🎓 英検' + (S.grade === '3' ? '3' : '準2') + '級<br>Speaking Simulator</h1>' +
     '<div class="settings">' +
     '<label>🔊 Voice: <select id="voice-select" onchange="onVoiceChange()"></select></label>' +
     '<label>🐢 Speed: <input type="range" id="rate-slider" min="0.5" max="1.2" step="0.05" value="0.85" onchange="onRateChange(this.value)"> <span id="rate-value">0.85</span></label>' +
@@ -2404,6 +3104,7 @@ function showMenu() {
     (SR ? '' : '<div class="warn">⚠️ Chrome推奨。他ブラウザはテキスト入力になります。</div>') +
     '<p class="hint">問題セットをえらんでね👇</p>' +
     '<div class="grid">' + cards + '</div>' +
+    '<button class="btn-go" style="margin-top:30px;background:#444;box-shadow:none;border:2px solid #555" onclick="showGradeSelection()">← 級の選択に戻る</button>' +
     '</div>'
   );
   loadVoices();
@@ -2755,4 +3456,35 @@ function showResults() {
     '<button class="btn-go" onclick="showMenu()">メニューに戻る</button></div>';
 
   render(html);
+}
+
+// ── GRADE SELECTION ────────────────────────────────────
+function showGradeSelection() {
+  stopTimer(); stopListening(); S.answers = [];
+  render(
+    '<div class="screen grade-selection">' +
+    '<h1>🎓 英検<br>Speaking Simulator</h1>' +
+    '<p class="hint" style="text-align:center;font-size:18px;margin-bottom:30px">挑戦する級を選んでください👇</p>' +
+    '<div class="grid">' +
+    '<div class="set-card grade-card" onclick="selectGrade(\'3\')" style="border: 3px solid #cd7f32; background: rgba(205,127,50,0.1)">' +
+    '<div class="set-emoji">🥉</div>' +
+    '<div class="set-title" style="font-size:24px;font-weight:bold;margin-top:10px">英検 3 級</div>' +
+    '<div class="set-info" style="color:#aaa;margin-top:5px">33レッスン収録<br>(音読 + 5 Questions)</div></div>' +
+    '<div class="set-card grade-card" onclick="selectGrade(\'pre2\')" style="border: 3px solid #c0c0c0; background: rgba(192,192,192,0.1)">' +
+    '<div class="set-emoji">🥈</div>' +
+    '<div class="set-title" style="font-size:24px;font-weight:bold;margin-top:10px">英検 準 2 級</div>' +
+    '<div class="set-info" style="color:#aaa;margin-top:5px">10レッスン収録<br>(音読 + 5 Questions)</div></div>' +
+    '</div>' +
+    '</div>'
+  );
+}
+
+function selectGrade(grade) {
+  S.grade = grade;
+  if (grade === '3') {
+    QUESTION_SETS = QUESTION_SETS_3;
+  } else {
+    QUESTION_SETS = QUESTION_SETS_PRE2;
+  }
+  showMenu();
 }
